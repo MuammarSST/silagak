@@ -38,8 +38,8 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlutterLogin(
-      title: 'SILAGAK',
-      logo: AssetImage('assets/images/logo.jpg'),
+      title: 'SIMAS',
+      logo: AssetImage('images/logo.png'),
       onLogin: _authUser,
 
       onSubmitAnimationCompleted: () {

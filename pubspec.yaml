@@ -1,5 +1,5 @@
-name: silagak
-description: aplikasi pengaduan masyarakat.
+name: simas
+description: aplikasi Sistem informasi manajemen arsip surat.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   faker: ^2.0.0
   flutter_login: ^4.0.0
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +56,10 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - images/logo.png
+
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

@@ -8,16 +8,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Login Demo',
+      title: 'Login',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
-        // accentColor: Colors.orange,
-        // cursorColor: Colors.orange,
         textTheme: TextTheme(
           headline3: TextStyle(
             fontFamily: 'OpenSans',
             fontSize: 45.0,
-            color: Colors.orange,
+            color: Colors.white,
           ),
           button: TextStyle(
             fontFamily: 'OpenSans',
