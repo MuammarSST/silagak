@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:faker/faker.dart';
 void main(){
-  runApp(MyApp());
+  runApp(Chat());
 }
 
-class MyApp extends StatelessWidget{
+class Chat extends StatelessWidget{
   var faker = new Faker();
 
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Extract Widget"),
+          title: Text("Riwayat Percakapan"),
         ),
         body: ListView.builder(
           itemCount: 100,

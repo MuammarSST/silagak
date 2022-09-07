@@ -1,39 +1,33 @@
+// main.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_login/flutter_login.dart';
-import 'chat.dart';
+import 'login_screen.dart';
 
-const users=const{
-  'xmuammar@gmail.com':'12345',
-  'muammarsst@gmail.com':'admin',
+void main() => runApp(MyApp());
 
-};
-
-class LoginScreen extends StatelessWidget{
-  Duration get loginTime => Duration(microseconds: 2250);
-
-  Future<String?> _authUser(LoginData){
-    debugPrint('Name${data.name}, Password:${data.password}');
-    return Future.delayed(loginTime).then((_){
-      if(!users.containsKey(data.name)){
-        return 'Pengguna tidak ada dalam sistem';
-      }
-      if(users[data.name]!=data.password){
-        return 'Kata sandi tidak cocok dalam sistem';
-      }
-      return null;
-    });
-  }
-
-  Widget build(BuildContext context){
-    return FlutterLogin(
-      title: 'SILAGAK',
-        logo: AssetImage('assets/images/ecorp-lightblue.png'),
-        onLogin: _authUser,
-      onSubmitAnimationCompleted: (){
-        Navigator.of(context).pushReplacementNamed(MaterialPageRoute(
-            builder: context)=>MyApp())
-      },
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Login Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        // accentColor: Colors.orange,
+        // cursorColor: Colors.orange,
+        textTheme: TextTheme(
+          headline3: TextStyle(
+            fontFamily: 'OpenSans',
+            fontSize: 45.0,
+            color: Colors.orange,
+          ),
+          button: TextStyle(
+            fontFamily: 'OpenSans',
+          ),
+          subtitle1: TextStyle(fontFamily: 'NotoSans'),
+          bodyText2: TextStyle(fontFamily: 'NotoSans'),
+        ),
+      ),
+      home: LoginScreen(),
     );
   }
-
 }
+
